@@ -171,3 +171,36 @@ const isTriangle = (a, b, c) => {
 };
 
 // console.log(isTriangle(1,2,2))
+
+//! Basic Mathematical Operations
+
+const basicOp = (operation, value1, value2) => {
+  switch (operation) {
+    case "+":
+      return value1 + value2;
+    case "-":
+      return value1 - value2;
+    case "*":
+      return value1 * value2;
+    case "/":
+      return value1 / value2;
+    default:
+      break;
+  }
+};
+
+// console.log(basicOp('-', 15 ,18))
+
+//! Number of People in the Bus
+
+const numberOfPeople = (busStops) => {
+  let peopleLeft = 0;
+
+  for (let i = 0; i < busStops.length; i++) {
+    peopleLeft += busStops[i][0] - busStops[i][1];
+  }
+
+  return peopleLeft;
+};
+
+// console.log(numberOfPeople([[10,0],[3,5],[5,8]])
