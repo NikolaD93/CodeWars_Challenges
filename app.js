@@ -249,6 +249,30 @@ const REGEXP = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/;
 //! Reversing Words in a String
 
 const reverseWords = (str) => {
-  return str.split(" ").reverse().join(" ");
+  let reverse = [];
+  let words = str.split(" ");
+  for (let i = words.length - 1; i >= 0; i--) {
+    reverse.push(words[i]);
+    
+  }
+  return reverse.join(" ");
 }
+//? This is how to reverse words in a String
+// console.log(reverseWords('Hello world'))
+
+
+//! Reverse words
+
+const revWords =  (str) => {
+  let revStr = str.split("").reverse().join("");
+  let array = [];
+  let revStrArr = revStr.split(" ");
+  for (let i = revStrArr.length - 1; i >= 0; i--) {
+    array.push(revStrArr[i]);
+  }
+  return array.join(" ");
+}
+//? This is how to reverse letters in a word of a string
+// console.log(revWords("double  spaced  words"))
+
 
