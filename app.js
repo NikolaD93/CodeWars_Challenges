@@ -245,3 +245,10 @@ const last = (str) => {
 //! Regex Password Validation
 
 const REGEXP = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/;
+
+//! Reversing Words in a String
+
+const reverseWords = (str) => {
+  return str.split(" ").reverse().join(" ");
+}
+
