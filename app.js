@@ -205,36 +205,38 @@ const numberOfPeople = (busStops) => {
 
 // console.log(numberOfPeople([[10,0],[3,5],[5,8]])
 
-
 //! Delete occurrences of an element if it occurs more than n times
 
 // [1,2,3,1,2,1,2,3] , 2
 // [1,2,3,1,2,3]
 // [20,37,20,21] , 1 => [20,37,21]
 
+const deleteNth = (arr, n) => {};
 
-const deleteNth = (arr,n) =>{
-
-}
-
-let arr = [1,2,3,1,4,2,3,2,1];
+let arr = [1, 2, 3, 1, 4, 2, 3, 2, 1];
 let uniqueChars = [...new Set(arr)];
 
 // console.log(uniqueChars);
 
-
 //! Remove anchor from URL
 
 const removeUrlAnchor = (url) => {
-  if(!url.includes('#')) return url;
-  return url.slice(0,url.indexOf('#'));
-}
+  if (!url.includes("#")) return url;
+  return url.slice(0, url.indexOf("#"));
+};
 
 // console.log(removeUrlAnchor("www.codewars.com/katas/#about"))
-
 
 //! Sentence Smash
 
 const smash = (words) => {
-  return words.join(' ');
+  return words.join(" ");
 };
+
+//! Sort by Last Char
+
+const last = (str) => {
+  return str.split(" ").sort((a,b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length -1))
+};
+
+console.log(last('what time are we climbing up the volcano'))
