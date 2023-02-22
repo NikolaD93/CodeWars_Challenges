@@ -239,4 +239,9 @@ const last = (str) => {
   return str.split(" ").sort((a,b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length -1))
 };
 
-console.log(last('what time are we climbing up the volcano'))
+// console.log(last('what time are we climbing up the volcano'))
+
+
+//! Regex Password Validation
+
+const REGEXP = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/;
