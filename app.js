@@ -236,11 +236,12 @@ const smash = (words) => {
 //! Sort by Last Char
 
 const last = (str) => {
-  return str.split(" ").sort((a,b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length -1))
+  return str
+    .split(" ")
+    .sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 };
 
 // console.log(last('what time are we climbing up the volcano'))
-
 
 //! Regex Password Validation
 
@@ -253,17 +254,15 @@ const reverseWords = (str) => {
   let words = str.split(" ");
   for (let i = words.length - 1; i >= 0; i--) {
     reverse.push(words[i]);
-    
   }
   return reverse.join(" ");
-}
+};
 //? This is how to reverse words in a String
 // console.log(reverseWords('Hello world'))
 
-
 //! Reverse words
 
-const revWords =  (str) => {
+const revWords = (str) => {
   let revStr = str.split("").reverse().join("");
   let array = [];
   let revStrArr = revStr.split(" ");
@@ -271,34 +270,31 @@ const revWords =  (str) => {
     array.push(revStrArr[i]);
   }
   return array.join(" ");
-}
+};
 //? This is how to reverse letters in a word of a string
 // console.log(revWords("double  spaced  words"))
-
 
 //! Break camelCase
 
 const solution = (string) => {
-    let words = string.split("");
-    let newStr = "";
+  let words = string.split("");
+  let newStr = "";
 
-    words.forEach(word => {
-      if( word === word.toUpperCase()) {
-        newStr += " " + word;
-      } else {
-        newStr += word
-      }
-    })
-
+  words.forEach((word) => {
+    if (word === word.toUpperCase()) {
+      newStr += " " + word;
+    } else {
+      newStr += word;
+    }
+  });
 
   return newStr;
 
   //? Done with Regex
   // return(string.replace(/([A-Z])/g, ' $1'));
-}
+};
 
-// console.log(solution("camelCasingTestCase")); 
-
+// console.log(solution("camelCasingTestCase"));
 
 //! Sum a list but ignore any duplicates
 
@@ -312,12 +308,37 @@ const sumNoDuplicates = (numList) => {
 
   let sum = 0;
   for (let num in counts) {
-    if(counts[num] === 1) {
+    if (counts[num] === 1) {
       sum += Number(num);
     }
   }
 
   return sum;
-}
+};
 
 // console.log(sumNoDuplicates([0, 10, 8, 9, 7, 3, 3, 9, 3, 6, 0]))
+
+//! Remove duplicates from list
+
+const distinct = (a) => {
+  // let seen = {};
+  // let result = [];
+  // for (let i = 0; i < a.length; i++) {
+  //   let current = a[i];
+  //   if (!seen[current]) {
+  //     seen[current] = true;
+  //     result.push(current);
+  //   }
+  // }
+  // return result;
+  let res = [];
+
+  for (let i = 0; i < a.length; i++) {
+    if (!res.includes(a[i])) {
+      res.push(a[i]);
+    }
+  }
+  return res;
+};
+
+console.log(distinct([1, 1, 2]));
