@@ -384,3 +384,10 @@ const unique = (arr) => {
 // console.log(unique([1,2,2,3]))
 
 
+//! Simple remove duplicates
+
+const solve = (arr) => {
+  return arr.filter((num, id) => arr.lastIndexOf(num) === id);
+}
+
+// console.log(solve([3,4,4,3,6,3]))
