@@ -373,3 +373,14 @@ const findDuplicates = (duplicates) => {
 };
 
 // console.log(findDuplicates([1,2,4,4,3,3,1,5,'5']))
+
+
+//! Train to remove duplicates from an array with filter()
+
+const unique = (arr) => {
+  return arr.filter((num, id) => arr.indexOf(num) === id)
+}
+
+// console.log(unique([1,2,2,3]))
+
+
