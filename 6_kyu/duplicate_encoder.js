@@ -12,3 +12,6 @@ const duplicateEncode = (word) => {
     return encoder;
 }
 
+
+
+
