@@ -10,6 +10,7 @@ const hasUniqueChars = (str) => {
     if (str.indexOf(str[i]) !== i) return false;
   }
   return true;
+ 
 };
 
 
