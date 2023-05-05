@@ -1,14 +1,13 @@
 const solution = (string) => {
-  let words = string.split("");
   let newStr = "";
 
-  words.forEach((word) => {
-    if (word === word.toUpperCase()) {
-      newStr += " " + word;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === string[i].toUpperCase()) {
+      newStr += " " + string[i];
     } else {
-      newStr += word;
+      newStr += string[i];
     }
-  });
+  }
 
   return newStr;
 
